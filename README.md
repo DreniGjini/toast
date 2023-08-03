@@ -1,8 +1,6 @@
 # my-toaster
 
-Short description of your component.
-
-![Your Component](link-to-your-component-screenshot.gif)
+Simple toast reusable component.
 
 ## How to Test the Application
 

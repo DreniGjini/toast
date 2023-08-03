@@ -17,11 +17,6 @@ import { ToasterProvider } from 'my-toaster';
 const App = () => {
   const { addToaster, toastOptions } = useToast();
 
-  // Set global options using useEffect in your higher-order components (e.g., layout).
-  useEffect(() => {
-    toastOptions({ position: "bottom", transitionTimingFunction: "ease" });
-  }, []);
-
   return (
     <ToasterProvider>
       {/* Your application content here */}

@@ -32,3 +32,5 @@ const App = () => {
 };
 
 export default App;
+```
+## How to Test the Application

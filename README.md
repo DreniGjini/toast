@@ -83,3 +83,12 @@ export default Layout;
 
 ```
 
+## Demo 
+
+To test demo would be to start the app normaly and in the default rout would give you 3 use cases.
+To Edit the cases you should edit the `ShowCast.tsx` file.
+
+# Contributor
+
+## Dreni Gjini
+

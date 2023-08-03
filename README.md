@@ -8,7 +8,7 @@ Short description of your component.
 
 To test the application, follow the steps below:
 
-1. Use `npm link` to link the component with your application.
+1. You can use StoryBook and/or Rollup, but a more simple way would be `npm link` to link the component with your application.
 2. Wrap your application with `<ToasterProvider>` to enable toast functionality.
 3. Import the `useToast` hook in your app to access toast functions:
 

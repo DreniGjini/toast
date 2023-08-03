@@ -1,4 +1,4 @@
-# Your Component Name
+# my-toaster
 
 Short description of your component.
 
@@ -14,7 +14,7 @@ To test the application, follow the steps below:
 
 ```jsx
 import React, { useEffect } from 'react';
-import { ToasterProvider, useToast } from 'your-component-name';
+import { ToasterProvider } from 'my-toaster';
 
 const App = () => {
   const { addToaster, toastOptions } = useToast();
@@ -33,4 +33,53 @@ const App = () => {
 
 export default App;
 ```
-## How to Test the Application
+### Step 2 would be inside a higher order component (best case) eg. Layout wrapper to call the options functions
+
+```jsx
+import React, { useEffect } from 'react';
+import { useToast } from 'my-toaster';
+
+const Layout = () => {
+  const { addToaster, toastOptions } = useToast();
+
+  useEffect(() => {
+    toastOptions({ position: "bottom", transitionTimingFunction: "ease", time: 5000 });
+  }, []);
+
+  return (
+    <div>
+      {children}
+    </div>
+  );
+};
+
+export default Layout;
+```
+- position: Is responsible for the apperance of the toast `bottom | top  `
+- transitionTimingFunction: Transition options
+- time: Will set the duration of the toast globaly.
+
+## To use the component you would call the addToaster() function like below
+
+```jsx
+
+  return (
+    <div>
+     <button
+        onClick={() =>
+          addToaster({
+            description: "Your example message",
+            title: "your title or a default one success | danger | warning"
+            id: Math.random(),
+            type: "danger",
+          })
+        }
+      >
+        Click Me
+      </button>
+    </div>
+  );
+};
+
+```
+
